@@ -1,0 +1,21 @@
+<div class="Categories">
+    <h1>Categories</h1>
+    <div class="btn">
+        <button (click)="onAdd()">+Add</button>
+        <p>{{message}}</p>
+    </div>
+    <div class="tb">
+        <table>
+            <tr>
+                <th>Category Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor="let s of categories">
+                <td>{{s.name}}</td>
+                <td><button (click)="onEdit(s)">Edit</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

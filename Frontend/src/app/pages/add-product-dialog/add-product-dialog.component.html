@@ -1,0 +1,46 @@
+<div class="add-product-container">
+  <h2>Add Product</h2>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="code">Product Code</label>
+      <input id="code" type="text" formControlName="productCode" placeholder="Enter product code" />
+      <small *ngIf="productForm.get('productCode')?.invalid && productForm.get('productCode')?.touched">
+        Product Code is required.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Product Name</label>
+      <input id="name" type="text" formControlName="productName" placeholder="Enter product name" />
+      <small *ngIf="productForm.get('productName')?.invalid && productForm.get('productName')?.touched">
+        Product Name is required.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input id="price" type="number" formControlName="price" placeholder="Enter price" />
+      <small *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+        Enter a valid price (minimum 0).
+      </small>
+    </div>
+
+    <div class="form-group checkbox">
+      <label>
+        <input type="checkbox" formControlName="isActive" />
+        Active
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category Name</label>
+      <input id="category" type="text" formControlName="categoryName" placeholder="Enter category name" />
+      <small *ngIf="productForm.get('categoryName')?.invalid && productForm.get('categoryName')?.touched">
+        Category Name is required.
+      </small>
+    </div>
+
+    <button type="submit" [disabled]="productForm.invalid">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+<div class="sidebar">
+    <ul>
+        <li *ngFor="let view of views">
+            <a [routerLink]="view.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                {{ view.name }}
+            </a>
+        </li>
+    </ul>
+</div>

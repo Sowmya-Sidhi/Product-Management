@@ -1,0 +1,73 @@
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* even space between left, middle, right */
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+/* Left section (Products title) */
+.title-section h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Middle section (Search) */
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-section input {
+  padding: 8px 12px;
+  border: 1px solid #cccc;
+  border-radius: 6px;
+  width: 200px;
+}
+
+.search-section button {
+  background: #F8FAFC;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.search-section button:hover {
+  background: #cccc;
+}
+
+/* Right section (+Add button) */
+.header-bar > button {
+  background: #9CA3AF;
+  color: black;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.header-bar > button:hover {
+  background: #cccc;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #9CA3AF;
+  color: black;
+}

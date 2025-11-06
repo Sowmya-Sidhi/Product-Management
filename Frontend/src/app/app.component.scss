@@ -1,0 +1,49 @@
+//Whole page
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 98vh; // full page height
+  background-color: #f9f9f9;
+}
+//heading
+app-navbar {
+  height: 80px;
+  background-color: #F8FAFC;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+
+
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden; // prevents layout scroll issues
+}
+//sidebar
+app-sidebar {
+  width: 240px;
+  background-color: #F8FAFC;
+  color: #fff;
+  flex-shrink: 0;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+//maincontentarea
+.content {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+}
+//footer
+app-footer {
+  height: 40px;
+  background-color: #F8FAFC;
+  color: #111827;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-shrink: 0;
+}
