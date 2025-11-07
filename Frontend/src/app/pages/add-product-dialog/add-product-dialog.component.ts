@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,33 +7,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './add-product-dialog.component.html',
   styleUrl: './add-product-dialog.component.scss'
 })
-export class AddProductDialogComponent {
+export class AddProductDialogComponent implements OnChanges {
   @Output() closeForm = new EventEmitter<void>();
-  @Output() submitProduct = new EventEmitter<any>();
-
-  private _product: any = null;
-
-  @Input()
-  set product(value: any) {
-    this._product = value;
-
-    if (this._product) {
-      // Patch the form with existing values for editing
-      this.productForm.patchValue({
-        productCode: this._product.productCode,
-        productName: this._product.productName,
-        price: this._product.price,
-        isActive: this._product.isActive,
-        categoryName: this._product.categoryName
-      });
-    } else {
-      // Reset form for adding new product
-      this.productForm.reset({ isActive: false });
-    }
-  }
-  get product() {
-    return this._product;
-  }
+  @Output() formSubmit = new EventEmitter<any>();
+  @Input() product: any | null = null;
+  @Input() existingProducts:any[]=[];
+  @Input() categories:any[]=[];
 
   productForm: FormGroup;
 
@@ -47,20 +26,57 @@ export class AddProductDialogComponent {
     });
   }
 
-  onSubmit() {
-    if (this.productForm.valid) {
-      const formData = { ...this.productForm.value };
-      
-      // remove _id if editing to avoid MongoDB immutable _id error
-      if (this.product && this.product._id) {
-        delete formData._id;
-      }
-
-      this.submitProduct.emit(formData); // send to parent component
-      this.productForm.reset({ isActive: false });
-      this.closeForm.emit();
+  ngOnChanges(): void {
+    if (this.product) {
+      this.productForm.patchValue({
+        productCode: this.product.productCode,
+        productName: this.product.productName,
+        price: this.product.price,
+        isActive: this.product.isActive,
+        categoryName: this.product.categoryName
+      });
     } else {
-      alert('Please fill all required fields correctly!');
+      this.productForm.reset({ isActive: false });
     }
   }
+  isDuplicate = false;
+  ngOnInit() {
+    this.productForm.get('productCode')?.valueChanges.subscribe(() => {
+      this.checkDuplicateCode();
+    });
+  }
+
+checkDuplicateCode() {
+  const enteredCode = this.productForm.get('productCode')?.value?.trim();
+  if (!enteredCode) {
+    this.isDuplicate = false;
+    return;
+  }
+
+  // Ignore current product’s own code during edit
+  const isEditing = !!this.product;
+  const duplicate = this.existingProducts.some(p =>
+    p.productCode === enteredCode &&
+    (!isEditing || p.productCode !== this.product?.productCode)
+  );
+
+  this.isDuplicate = duplicate;
+}
+
+
+ onSubmit() {
+  if (this.isDuplicate) {
+    alert('Product code already exists!');
+    return;
+  }
+
+  if (this.productForm.valid) {
+    this.formSubmit.emit(this.productForm.value);
+    this.productForm.reset({ isActive: false });
+    this.closeForm.emit();
+  } else {
+    alert('Please fill all required fields correctly!');
+  }
+}
+
 }

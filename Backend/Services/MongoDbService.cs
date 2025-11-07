@@ -47,8 +47,12 @@ namespace Demo_Backend.Services
         public async Task AddProductAsync(Product product) =>
             await _productsCollection.InsertOneAsync(product);
 
-        public async Task UpdateProductAsync(Product product) =>
-            await _productsCollection.ReplaceOneAsync(p => p.ProductCode == product.ProductCode, product);
+        public async Task UpdateProductAsync(string code, Product product)
+{
+    var filter = Builders<Product>.Filter.Eq(p => p.ProductCode, code);
+    await _productsCollection.ReplaceOneAsync(filter, product);
+}
+
 
         public async Task DeleteProductAsync(string productCode) =>
             await _productsCollection.DeleteOneAsync(p => p.ProductCode == productCode);

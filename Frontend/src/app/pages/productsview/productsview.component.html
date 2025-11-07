@@ -1,43 +1,71 @@
+<div class="products-container">
 <div class="header-bar">
-    <div clas="title-section">
-        <h1>Products</h1>
-       
-    </div>
-    <div class="search-section">
+  <div class="title-section">
+    <h1>Products</h1>
+  </div>
+  <div class="search-section">
     <input type="text" placeholder="search"/>
     <button>🔍</button>
-    </div>
-     <button (click)="onButtonClick()">+Add</button>
-     <!-- <p *ngIf="message" class="success">{{message}}</p> -->
-</div>
-
- <div *ngIf="showForm">
-    <app-add-product-dialog (submitProduct)="onFormSubmit($event)" (closeForm)="onFormClose()"></app-add-product-dialog>
   </div>
 
+  <!-- Add button -->
+ <button [disabled]="role !== 'Admin' && role !== 'Manager'" (click)="onButtonClick()">+ Add</button>
+</div>
+
+<p *ngIf="message" class="success">{{ message }}</p>
+
+<!-- Add/Edit Form -->
+<div *ngIf="showForm">
+  <app-add-product-dialog
+    [product]="editingProduct"
+    [existingProducts]="products"
+    [categories]="categories"
+    (formSubmit)="onFormSubmit($event)"
+    (closeForm)="onFormClose()">
+  </app-add-product-dialog>
+</div>
+
+<!-- Products Table -->
+ <div class="table-wrapper">
 <table>
-    <tr>
-        <th>Product Code</th>
-        <th>Product Name</th>
-        <th>Price</th>
-        <th>IsActive</th>
-        <th>Category Name</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
+  <thead>
+  <tr>
+    <th>Product Code</th>
+    <th>Product Name</th>
+    <th>Price</th>
+    <th>IsActive</th>
+    <th>Category Name</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let s of products">
+    <td>{{ s.productCode }}</td>
+    <td>{{ s.productName }}</td>
+    <td>{{ s.price }}</td>
+    <td>{{ s.isActive }}</td>
+    <td>{{ s.categoryName }}</td>
+    
+     <!-- Edit Button -->
+<button
+  class="edit-btn"
+  (click)="onEdit(s)"
+  [disabled]="role !== 'Admin' && role !== 'Manager'">
+  ✏️
+</button>
 
-    <tr *ngFor= "let s of products">
-    <td>{{s.productCode}}</td>
-    <td>{{s.productName}}</td>
-    <td>{{s.price}}</td>
-    <td>{{s.isActive}}</td>
-    <td>{{s.categoryName}}</td>
-      <td>
-      <button class="edit-btn" (click)="onEdit(s)">✏️</button>
-    </td>
+    <!-- Delete button -->
     <td>
-      <button class="delete-btn" (click)="onDelete(s)">🗑️</button>
-    </td>
-    </tr>
-
+     <button
+  class="delete-btn"
+  (click)="onDelete(s)"
+  [disabled]="role !== 'Admin'">
+  🗑️
+</button>
+</td>
+  </tr>
+  </tbody>
 </table>
+</div>
+</div>

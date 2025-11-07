@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './auth.interceptor';
+import { AddCategoryComponent } from './pages/add-category/add-category.component';
 
 
 @NgModule({
@@ -28,13 +29,13 @@ import { authInterceptor } from './auth.interceptor';
     SidebarComponent,
     FooterComponent,
     ProductsviewComponent,
-    
     CategoriesviewComponent,
     ReportsviewComponent,
     MainContentComponent,
     LoginComponent,
     RegisterComponent,
-    AddProductDialogComponent
+    AddProductDialogComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,

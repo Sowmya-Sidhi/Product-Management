@@ -1,0 +1,13 @@
+<div class="add-category-container">
+  <h3>{{ category ? 'Edit' : 'Add' }} Category</h3>
+  <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Enter Category Name"/>
+    <small *ngIf="categoryForm.get('name')?.invalid && categoryForm.get('name')?.touched" style="color:red;">
+      Category Name is required.
+    </small>
+    <small *ngIf="isDuplicate" style="color:red;">
+      ⚠️ Category already exists!
+    </small>
+    <button type="submit" [disabled]="categoryForm.invalid || isDuplicate">{{ category ? 'Update' : 'Add' }}</button>
+  </form>
+</div>

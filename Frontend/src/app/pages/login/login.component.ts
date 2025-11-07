@@ -7,7 +7,7 @@ import { AuthService } from '../../services/auth.service';
   selector: 'app-login',
   standalone: false,
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   email:string='';
@@ -25,6 +25,9 @@ export class LoginComponent {
 
         this.authService.saveToken(response.token);
         this.router.navigate(['/dashboard']);
+        sessionStorage.getItem('token')
+        sessionStorage.getItem('role')
+
       },
       error: (err) => {
         console.error('Login failed:', err);

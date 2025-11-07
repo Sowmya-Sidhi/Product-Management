@@ -1,21 +1,56 @@
-<div class="Categories">
-    <h1>Categories</h1>
-    <div class="btn">
-        <button (click)="onAdd()">+Add</button>
-        <p>{{message}}</p>
-    </div>
-    <div class="tb">
-        <table>
-            <tr>
-                <th>Category Name</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-            <tr *ngFor="let s of categories">
-                <td>{{s.name}}</td>
-                <td><button (click)="onEdit(s)">Edit</button></td>
-                <td><button>Delete</button></td>
-            </tr>
-        </table>
+<div class="header-bar">
+<div class="left-section">
+  <h1>Categories</h1>
+  </div>
+
+  <div class="right-section">
+    <!-- Add button: Admin or Manager -->
+    <button 
+      (click)="onAdd()" 
+      [disabled]="role !== 'Admin' && role !== 'Manager'">
+      ➕ Add Category
+    </button>
     </div>
 </div>
+    <p *ngIf="message" style="color: green;">{{ message }}</p>
+
+  <!-- Add/Edit Form -->
+  <div *ngIf="showForm">
+    <app-add-category
+      [existingCategories]="categories"
+      [category]="editingCategory"
+      (formSubmit)="onFormSubmit($event)"
+      (closeForm)="onFormClose()">
+    </app-add-category>
+  </div>
+
+  <div class="tb">
+    <table>
+      <tr>
+        <th>Category Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr *ngFor="let c of categories">
+        <td>{{ c.name }}</td>
+
+        <!-- Edit button: Admin or Manager -->
+        <td>
+          <button 
+            (click)="onEdit(c)" 
+            [disabled]="role !== 'Admin' && role !== 'Manager'">
+            ✏️
+          </button>
+        </td>
+
+        <!-- Delete button: Admin only -->
+        <td>
+          <button 
+            (click)="onDelete(c)" 
+            [disabled]="role !== 'Admin'">
+            🗑️
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>

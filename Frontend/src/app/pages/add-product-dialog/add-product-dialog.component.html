@@ -8,6 +8,9 @@
       <small *ngIf="productForm.get('productCode')?.invalid && productForm.get('productCode')?.touched">
         Product Code is required.
       </small>
+       <small *ngIf="isDuplicate" style="color:red;">
+      ⚠️ Product code already exists!
+    </small>
     </div>
 
     <div class="form-group">
@@ -33,14 +36,20 @@
       </label>
     </div>
 
-    <div class="form-group">
+   <div class="form-group">
       <label for="category">Category Name</label>
-      <input id="category" type="text" formControlName="categoryName" placeholder="Enter category name" />
+      <select id="category" formControlName="categoryName">
+  <option value="">-- Select Category --</option>
+  <option *ngFor="let cat of categories" [value]="cat.name">
+    {{ cat.name }}
+  </option>
+</select>
+
       <small *ngIf="productForm.get('categoryName')?.invalid && productForm.get('categoryName')?.touched">
         Category Name is required.
       </small>
     </div>
 
-    <button type="submit" [disabled]="productForm.invalid">Submit</button>
+    <button type="submit" [disabled]="productForm.invalid ||isDuplicate">Submit</button>
   </form>
 </div>

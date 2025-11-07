@@ -72,33 +72,36 @@ namespace Demo_Backend.Controllers
         }
 
         // PUT: api/products/{code}
-        [HttpPut("{code}")]
-        [Authorize(Roles = "Admin,Manager")]
-        public async Task<IActionResult> UpdateProduct(string code, [FromBody] Product product)
-        {
-            var existing = await _mongoService.GetProductByCodeAsync(code);
-          
+       [HttpPut("{code}")]
+[Authorize(Roles = "Admin,Manager")]
+public async Task<IActionResult> UpdateProduct(string code, [FromBody] Product product)
+{
+    var existing = await _mongoService.GetProductByCodeAsync(code);
+    if (existing == null) return NotFound();
 
-            if (existing == null) return NotFound();
+    // Keep original created info
+    product.Id = existing.Id;
+    product.CreatedAt = existing.CreatedAt;
+    product.CreatedBy = existing.CreatedBy;
 
-            // Keep original created info
-            product.Id = existing.Id;
-            product.CreatedAt = existing.CreatedAt;
-            product.CreatedBy = existing.CreatedBy;
-            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub)
+    var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub)
               ?? User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            product.UpdatedAt = DateTime.UtcNow;
-            product.UpdatedBy = userId; //Current User!
+    product.UpdatedAt = DateTime.UtcNow;
+    product.UpdatedBy = userId;
 
-            await _mongoService.UpdateProductAsync(product);
-            _auditService.LogAction(
-            userId,
-             "Updated Product",
-             $"Product Name: {product.ProductName}"
-         );
-            return Ok(product);
-        }
+    // ✅ now passing old code separately
+    await _mongoService.UpdateProductAsync(code, product);
+
+    _auditService.LogAction(
+        userId,
+        "Updated Product",
+        $"Product Name: {product.ProductName}"
+    );
+
+    return Ok(product);
+}
+
 
         // DELETE: api/products/{code}
         [HttpDelete("{code}")]

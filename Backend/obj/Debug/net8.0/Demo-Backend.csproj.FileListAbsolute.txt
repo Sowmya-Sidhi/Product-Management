@@ -152,3 +152,4 @@ C:\Users\Sidhi\Angular_Example\product-management\backend\obj\Debug\net8.0\refin
 C:\Users\Sidhi\Angular_Example\product-management\backend\obj\Debug\net8.0\Demo-Backend.pdb
 C:\Users\Sidhi\Angular_Example\product-management\backend\obj\Debug\net8.0\Demo-Backend.genruntimeconfig.cache
 C:\Users\Sidhi\Angular_Example\product-management\backend\obj\Debug\net8.0\ref\Demo-Backend.dll
+C:\Users\Sidhi\Angular_Example\product-management\backend\obj\Debug\net8.0\Demo-Backend.sourcelink.json

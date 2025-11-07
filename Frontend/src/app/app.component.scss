@@ -18,8 +18,9 @@ app-navbar {
 .main-container {
   display: flex;
   flex: 1;
-  overflow: hidden; // prevents layout scroll issues
+  overflow: hidden; 
 }
+
 //sidebar
 app-sidebar {
   width: 240px;
@@ -30,6 +31,7 @@ app-sidebar {
   padding: 20px;
   overflow-y: auto;
 }
+
 //maincontentarea
 .content {
   flex: 1;
@@ -37,6 +39,7 @@ app-sidebar {
   padding: 20px;
   overflow-y: auto;
 }
+
 //footer
 app-footer {
   height: 40px;
