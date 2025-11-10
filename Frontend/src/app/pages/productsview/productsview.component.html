@@ -48,12 +48,14 @@
     <td>{{ s.categoryName }}</td>
     
      <!-- Edit Button -->
+      <td>
 <button
   class="edit-btn"
   (click)="onEdit(s)"
   [disabled]="role !== 'Admin' && role !== 'Manager'">
   ✏️
 </button>
+</td>
 
     <!-- Delete button -->
     <td>

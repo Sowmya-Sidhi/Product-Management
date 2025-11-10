@@ -35,17 +35,19 @@
         <td>{{ c.name }}</td>
 
         <!-- Edit button: Admin or Manager -->
+         
         <td>
-          <button 
+          <button class="edit-btn" 
             (click)="onEdit(c)" 
             [disabled]="role !== 'Admin' && role !== 'Manager'">
             ✏️
           </button>
         </td>
+        
 
         <!-- Delete button: Admin only -->
         <td>
-          <button 
+          <button class="delete-btn"
             (click)="onDelete(c)" 
             [disabled]="role !== 'Admin'">
             🗑️

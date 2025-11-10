@@ -23,12 +23,12 @@ export class CategoriesviewComponent {
   ngOnInit(): void {
     this.loadCategories();
 
-    // ✅ Get user role from AuthService
+    //  Get user role from AuthService
     this.role = this.authService.getRole();
     console.log('User role:', this.role);
   }
 
-  // 🔁 Load all categories
+  //  Load all categories
   loadCategories() {
     this.categoriesService.getCategories().subscribe({
       next: (data) => {
@@ -39,10 +39,10 @@ export class CategoriesviewComponent {
     });
   }
 
-  // ➕ Add new category
+  // Add new category
   onAdd() {
     if (this.role !== 'Admin' && this.role !== 'Manager') {
-      alert('⚠️ You do not have permission to add categories.');
+      alert(' You do not have permission to add categories.');
       return;
     }
 
@@ -51,10 +51,10 @@ export class CategoriesviewComponent {
     this.message = '';
   }
 
-  // ✏️ Edit existing category
+  // Edit existing category
   onEdit(category: any) {
     if (this.role !== 'Admin' && this.role !== 'Manager') {
-      alert('⚠️ You do not have permission to edit categories.');
+      alert(' You do not have permission to edit categories.');
       return;
     }
 
@@ -63,10 +63,10 @@ export class CategoriesviewComponent {
     this.message = '';
   }
 
-  // 💾 Save (Add or Edit)
+  //  Save (Add or Edit)
   onFormSubmit(category: any) {
     if (this.editingCategory) {
-      // ✏️ Update category
+      //  Update category
       this.categoriesService.updateCategory(this.editingCategory.id, category).subscribe({
         next: () => {
           this.loadCategories();
@@ -77,7 +77,7 @@ export class CategoriesviewComponent {
         error: (err) => console.error('Error updating category:', err)
       });
     } else {
-      // ➕ Add new category
+      //  Add new category
       this.categoriesService.addCategory(category).subscribe({
         next: () => {
           this.loadCategories();
@@ -89,10 +89,10 @@ export class CategoriesviewComponent {
     }
   }
 
-  // 🗑️ Delete category (Admin only)
+  //  Delete category (Admin only)
   onDelete(category: any) {
     if (this.role !== 'Admin') {
-      alert('⚠️ Only Admins can delete categories.');
+      alert(' Only Admins can delete categories.');
       return;
     }
 
@@ -104,7 +104,7 @@ export class CategoriesviewComponent {
         this.message = `Category "${category.name}" deleted successfully!`;
       },
       error: (err) =>{ if (err?.error?.message?.includes('cannot delete') || err?.status === 400) {
-        alert(`⚠️ Category "${category.name}" cannot be deleted because it is assigned to one or more products.`);
+        alert(` Category "${category.name}" cannot be deleted because it is assigned to one or more products.`);
       } else {
         console.error('Error deleting category:', err);
       }
@@ -112,7 +112,7 @@ export class CategoriesviewComponent {
 });
   }
 
-  // 🚪 Close the form
+  // Close the form
   onFormClose() {
     this.showForm = false;
     this.editingCategory = null;
