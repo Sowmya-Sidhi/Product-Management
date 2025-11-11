@@ -52,7 +52,9 @@ export class AddCategoryComponent implements OnChanges {
       (!isEditing || c.id !== this.category?.id)
     );
   }
-
+onClose(){
+  this.closeForm.emit()
+}
   onSubmit() {
     if (this.isDuplicate) {
       alert('Category name already exists!');

@@ -74,7 +74,20 @@ export class CategoriesviewComponent {
           this.showForm = false;
           this.editingCategory = null;
         },
-        error: (err) => console.error('Error updating category:', err)
+        error: (err) => {console.error('Error updating category:', err);
+           // 🛑 Handle case where backend blocks update due to linked products
+        const errorMsg = err?.error || err?.error?.message || '';
+        if (
+          typeof errorMsg === 'string' &&
+          errorMsg.toLowerCase().includes('cannot update category name')
+        ) {
+          alert(`Category "${category.name}" cannot be updated because it is already used by one or more products.`);
+        } else if (err?.status === 400) {
+          alert(err.error || 'Bad request. Please check your input.');
+        } else {
+          alert('An unexpected error occurred while updating the category.');
+        }
+      }
       });
     } else {
       //  Add new category

@@ -1,5 +1,8 @@
 <div class="add-category-container">
+  <div class="dialog-header">
   <h3>{{ category ? 'Edit' : 'Add' }} Category</h3>
+  <button type="button" class="close-btn" (click)="onClose()">✖</button>
+  </div>
   <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
     <input type="text" formControlName="name" placeholder="Enter Category Name"/>
     <small *ngIf="categoryForm.get('name')?.invalid && categoryForm.get('name')?.touched" style="color:red;">

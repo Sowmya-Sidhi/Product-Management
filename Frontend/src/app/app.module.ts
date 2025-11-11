@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './auth.interceptor';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
+import { ResetpasswordComponent } from './pages/resetpassword/resetpassword.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AddCategoryComponent } from './pages/add-category/add-category.componen
     LoginComponent,
     RegisterComponent,
     AddProductDialogComponent,
-    AddCategoryComponent
+    AddCategoryComponent,ResetpasswordComponent
+   
   ],
   imports: [
     BrowserModule,

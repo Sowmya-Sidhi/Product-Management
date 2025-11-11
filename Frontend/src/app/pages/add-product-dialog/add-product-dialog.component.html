@@ -1,16 +1,18 @@
 <div class="add-product-container">
-  <h2>Add Product</h2>
+  <div class="dialog-header">
+    <h2>{{ product ? 'Edit Product' : 'Add Product' }}</h2>
+    <button type="button" class="close-btn" (click)="onClose()">✖</button>
+  </div>
 
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
     <div class="form-group">
       <label for="code">Product Code</label>
       <input id="code" type="text" formControlName="productCode" placeholder="Enter product code" />
       <small *ngIf="productForm.get('productCode')?.invalid && productForm.get('productCode')?.touched">
         Product Code is required.
       </small>
-       <small *ngIf="isDuplicate" style="color:red;">
-      ⚠️ Product code already exists!
-    </small>
+      <small *ngIf="isDuplicate" style="color:red;">⚠️ Product code already exists!</small>
     </div>
 
     <div class="form-group">
@@ -30,26 +32,25 @@
     </div>
 
     <div class="form-group checkbox">
-      <label>
-        <input type="checkbox" formControlName="isActive" />
+      <label for="isActive">
         Active
+        <input type="checkbox" formControlName="isActive" id="isActive" />
       </label>
     </div>
 
-   <div class="form-group">
+    <div class="form-group">
       <label for="category">Category Name</label>
       <select id="category" formControlName="categoryName">
-  <option value="">-- Select Category --</option>
-  <option *ngFor="let cat of categories" [value]="cat.name">
-    {{ cat.name }}
-  </option>
-</select>
-
+        <option value="" disabled>-- Select Category --</option>
+        <option *ngFor="let cat of categories" [value]="cat.name">
+          {{ cat.name }}
+        </option>
+      </select>
       <small *ngIf="productForm.get('categoryName')?.invalid && productForm.get('categoryName')?.touched">
         Category Name is required.
       </small>
     </div>
 
-    <button type="submit" [disabled]="productForm.invalid ||isDuplicate">Submit</button>
+    <button type="submit" [disabled]="productForm.invalid || isDuplicate">Submit</button>
   </form>
 </div>

@@ -1,11 +1,10 @@
 .sidebar {
-  color: white;
-  padding: 20px 10px;
   display: flex;
   flex-direction: column;
-  
-  justify-content: flex-start;
- 
+  background-color: #F8FAFC;
+  border-radius: 20px;
+  padding: 20px;
+  height: auto;
 
   ul {
     list-style: none;
@@ -13,60 +12,37 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 29px;
-    flex-grow: 1;
+    gap: 35px;
+    font-size: larger;
   }
 
   li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 14px;
-    
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.5s, transform 0.1s;
-
-    &:hover {
-      background-color: #9CA3AF;
-    
-    }
+    transition: background 0.3s, transform 0.1s;
 
     a {
+      display: block;
       text-decoration: none;
-      color:black; 
-      width: 100%;
+      color: black;
+      padding: 10px 14px;
+      border-radius: 8px; /* ensures hover and active match */
+      width: 90%;
+      transition: background 0.3s;
 
-      &.active {
-        background-color: #9CA3AF; 
-        padding: 10px 14px;
-        border-radius: 8px;
-        
+      /* Hover effect */
+      &:hover {
+        background-color: #9CA3AF;
       }
 
-      &:hover {
-        color: black; 
+      /* Active route highlight */
+      &.active {
+        background-color: #9CA3AF;
       }
 
       &:visited {
         color: black;
-         
       }
-    }
-  }
-
-  button {
-    background-color: #4caf50;
-    color: black;
-    border: none;
-    border-radius: 6px;
-    padding: 6px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.2s;
-
-    &:hover {
-      background-color: #45a049;
     }
   }
 }

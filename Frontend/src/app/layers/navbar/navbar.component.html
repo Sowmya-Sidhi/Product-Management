@@ -1,16 +1,17 @@
 <nav class="navbar">
-    <div class="menu-container" (click)="toggleMenu()">
-        <button class="menu-btn">☰ Menu</button>
-        <ul class="dropdown" *ngIf="menuOpen">
-            <li (click)="onFile()">File</li>
-            <li (click)="onExit()">Exit</li>
-        </ul>
-    </div>
-    <div class="page-title">
+  <div class="menu-container" (click)="toggleMenu()">
+    <button class="menu-btn">☰ Menu</button>
+    <ul class="dropdown" *ngIf="menuOpen">
+      <li (click)="onFile()">File</li>
+      <li (click)="onExit()">Exit</li>
+    </ul>
+  </div>
+
+  <div class="page-title">
     {{ currentPage }}
   </div>
-    <div class="logout">
-        <button (click)="onExit()">Logout</button>
-    </div>
 
+  <div class="logout">
+    <button (click)="onExit()">Logout</button>
+  </div>
 </nav>

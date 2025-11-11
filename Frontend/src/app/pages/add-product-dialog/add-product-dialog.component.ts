@@ -78,5 +78,8 @@ checkDuplicateCode() {
     alert('Please fill all required fields correctly!');
   }
 }
+onClose(){
+  this.closeForm.emit();
+}
 
 }

@@ -33,7 +33,7 @@ namespace Demo_Backend.Controllers
             user.Password = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
             await _mongoService.UpdateUserAsync(user);
 
-            return Ok("Password reset successfully.");
+            return Ok(new {message="Password reset successfully." });
         }
     }
 }

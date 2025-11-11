@@ -85,22 +85,32 @@ namespace Demo_Backend.Controllers
             if (string.IsNullOrWhiteSpace(category.Name))
                 return BadRequest("Category name cannot be empty.");
 
+        var products = await _mongoService.GetProductsAsync();
+        bool isUsed = products.Any(p => p.CategoryName == existing.Name);
+
+        if (isUsed && !string.Equals(existing.Name, category.Name, StringComparison.OrdinalIgnoreCase))
+            {
+                return BadRequest("Cannot update category name. It is currently used by existing products.");
+            }
+
+
+
             existing.Name = category.Name;
             category.CreatedAt = existing.CreatedAt;
             category.CreatedBy = existing.CreatedBy;
             var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub)
              ?? User.FindFirstValue(ClaimTypes.NameIdentifier);
             category.UpdatedAt = DateTime.UtcNow;
-            category.UpdatedBy = userId;
+            existing.UpdatedBy = userId;
 
-            await _mongoService.UpdateCategoryAsync(category);
+            await _mongoService.UpdateCategoryAsync(existing);
             _auditService.LogAction(
                userId,
                "Updated Category",
                $"Category Name: {category.Name}"
            );
 
-            return Ok(category);
+            return Ok(existing);
         }
 
         // DELETE: api/categories/{id}

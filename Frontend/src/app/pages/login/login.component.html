@@ -8,7 +8,11 @@
         <div class="form-group">
             <label>Password</label>
             <input type="password"[(ngModel)]="password" name="password" required/>
+            <p>Forgot Password? 
+                <a routerLink="/resetpassword">ResetPassword</a>
+            </p>
         </div>
+
         <button type="submit">Login</button>
         <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
         <p>

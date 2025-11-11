@@ -33,6 +33,10 @@ export class AuthService {
       sessionStorage.setItem('role', role);
     }
   }
+  resetPassword(email: string, newPassword: string) {
+  return this.http.post(`${this.baseUrl}/reset-password`, { email, newPassword });
+}
+
 
   getToken(): string | null {
     return this.isBrowser() ? sessionStorage.getItem('token') : null;
@@ -69,6 +73,10 @@ export class AuthService {
     const decoded = this.decodeToken(token);
     return decoded?.sub || decoded?.nameid || null;
   }
+  requestPasswordReset(email: string) {
+  return this.http.post('/api/auth/request-reset', { email });
+}
+
 
   isAuthenticated(): boolean {
     return !!this.getToken();

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 import { Router,NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -13,6 +13,15 @@ menuOpen=false;
 currentPage='';
   toggleMenu(){
     this.menuOpen=!this.menuOpen;
+  }
+  @HostListener('document:click', ['$event'])
+  handleOutsideClick(event: Event) {
+    const target = event.target as HTMLElement;
+    const clickedInside = target.closest('.menu-container');
+    
+    if (!clickedInside) {
+      this.menuOpen = false; // 👈 Close menu if clicked outside
+    }
   }
   onFile(){
     alert('File Option clicked');

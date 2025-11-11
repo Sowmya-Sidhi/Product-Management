@@ -12,6 +12,6 @@ export class AppComponent {
    constructor(public router: Router) {}
     isAuthPage(): boolean {
     const route = this.router.url;
-    return route === '/login' || route === '/register';
+    return route === '/login' || route === '/register'|| route ==='/resetpassword';
   }
 }

@@ -5,13 +5,13 @@ import { ProductsviewComponent } from './pages/productsview/productsview.compone
 import { ReportsviewComponent } from './pages/reportsview/reportsview.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ResetpasswordComponent } from './pages/resetpassword/resetpassword.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-    {path:'register',component:RegisterComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'resetpassword',component:ResetpasswordComponent},
   {path:'',redirectTo:'/login',pathMatch:'full'},
-
- 
   {path:'dashboard',component:ReportsviewComponent},
   {path:'products',component:ProductsviewComponent},
   {path:'categories',component:CategoriesviewComponent},

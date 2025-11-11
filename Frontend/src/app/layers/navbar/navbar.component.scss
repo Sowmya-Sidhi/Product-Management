@@ -1,5 +1,4 @@
 .navbar {
-
   backdrop-filter: blur(10px);
   color: white;
   height: 60px;
@@ -14,31 +13,17 @@
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
 .page-title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   color: #111827;
 }
-.logout {
-  display: flex;
-  justify-content: flex-end; // 👈 aligns button to right
-}
-.logout button {
-  background-color: #e63946;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.3s;
 
-  &:hover {
-    background-color: #d62828;
-  }
-}
+/* ✅ Menu styles */
 .menu-container {
   position: relative;
+  display: inline-block; /* keeps dropdown aligned under the menu button */
 }
 
 .menu-btn {
@@ -56,14 +41,15 @@
   }
 }
 
+/* ✅ Dropdown aligned directly below the Menu button */
 .dropdown {
   position: absolute;
   top: calc(100% + 8px);
-  right: 0;
+  left: 0; /* 👈 aligns directly below the menu button */
   background-color: rgba(255, 255, 255, 0.95);
   color: black;
   list-style: none;
-  padding: 0px 0;
+  padding: 0;
   margin: 0;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -82,8 +68,24 @@
     color: white;
   }
 }
+
+/* ✅ Logout button styles */
 .logout {
   display: flex;
-  justify-content: left; 
-  padding: 20px; 
+  justify-content: flex-end;
+}
+
+.logout button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: #d62828;
+  }
 }

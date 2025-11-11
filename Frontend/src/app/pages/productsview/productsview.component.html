@@ -4,9 +4,12 @@
     <h1>Products</h1>
   </div>
   <div class="search-section">
-    <input type="text" placeholder="search"/>
+  <div class="search-wrapper">
+    <input type="text" placeholder="Search..." />
     <button>🔍</button>
   </div>
+</div>
+
 
   <!-- Add button -->
  <button [disabled]="role !== 'Admin' && role !== 'Manager'" (click)="onButtonClick()">+ Add</button>
