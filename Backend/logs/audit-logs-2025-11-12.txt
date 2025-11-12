@@ -1,0 +1,1 @@
+[2025-11-12 11:26:30] [INF] User 68eca691e742a08862aadfc9 performed Created Category. Details: Category Name: kjhg at "2025-11-12T11:26:30.0923702+05:30"

@@ -73,9 +73,6 @@ export class AuthService {
     const decoded = this.decodeToken(token);
     return decoded?.sub || decoded?.nameid || null;
   }
-  requestPasswordReset(email: string) {
-  return this.http.post('/api/auth/request-reset', { email });
-}
 
 
   isAuthenticated(): boolean {

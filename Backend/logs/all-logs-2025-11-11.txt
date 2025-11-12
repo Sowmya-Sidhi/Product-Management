@@ -3955,3 +3955,266 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 [2025-11-11 12:49:59] [DBG] Connection id "0HNH0RKN0KE5I" stopped.
 [2025-11-11 12:49:59] [DBG] Connection id "0HNH0RKN0KE5I" sending FIN because: "The Socket transport's send loop completed gracefully."
 [2025-11-11 12:49:59] [DBG] Hosting stopped
+[2025-11-11 12:50:08] [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2025-11-11 12:50:08] [DBG] Hosting starting
+[2025-11-11 12:50:08] [INF] User profile is available. Using 'C:\Users\Sidhi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-11-11 12:50:08] [DBG] Reading data from file 'C:\Users\Sidhi\AppData\Local\ASP.NET\DataProtection-Keys\key-4dd9ce58-8bbf-43da-8673-cbb58b3cad33.xml'.
+[2025-11-11 12:50:08] [DBG] Found key {4dd9ce58-8bbf-43da-8673-cbb58b3cad33}.
+[2025-11-11 12:50:08] [DBG] Considering key {4dd9ce58-8bbf-43da-8673-cbb58b3cad33} with expiration date 2025-11-18 09:04:57Z as default key.
+[2025-11-11 12:50:08] [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+[2025-11-11 12:50:08] [DBG] Decrypting secret element using Windows DPAPI.
+[2025-11-11 12:50:08] [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+[2025-11-11 12:50:08] [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+[2025-11-11 12:50:08] [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+[2025-11-11 12:50:08] [DBG] Using key {4dd9ce58-8bbf-43da-8673-cbb58b3cad33} as the default key.
+[2025-11-11 12:50:08] [DBG] Key ring with default key {4dd9ce58-8bbf-43da-8673-cbb58b3cad33} was loaded during application startup.
+[2025-11-11 12:50:08] [INF] Now listening on: http://localhost:5000
+[2025-11-11 12:50:08] [DBG] Loaded hosting startup assembly Demo-Backend
+[2025-11-11 12:50:08] [INF] Application started. Press Ctrl+C to shut down.
+[2025-11-11 12:50:08] [INF] Hosting environment: Development
+[2025-11-11 12:50:08] [INF] Content root path: C:\Users\Sidhi\Angular_Example\product-management\backend
+[2025-11-11 12:50:08] [DBG] Hosting started
+[2025-11-11 12:51:43] [DBG] Connection id "0HNH0UBRHIO4D" accepted.
+[2025-11-11 12:51:43] [DBG] Connection id "0HNH0UBRHIO4D" started.
+[2025-11-11 12:51:43] [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/users/reset-password - null null
+[2025-11-11 12:51:43] [DBG] Wildcard detected, all requests with hosts will be allowed.
+[2025-11-11 12:51:43] [DBG] 1 candidate(s) found for the request path '/api/users/reset-password'
+[2025-11-11 12:51:43] [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+[2025-11-11 12:51:43] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:43] [WRN] Failed to determine the https port for redirect.
+[2025-11-11 12:51:43] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:43] [INF] CORS policy execution successful.
+[2025-11-11 12:51:43] [DBG] The request is a preflight request.
+[2025-11-11 12:51:43] [DBG] Connection id "0HNH0UBRHIO4D" completed keep alive response.
+[2025-11-11 12:51:43] [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/users/reset-password - 204 null null 41.6743ms
+[2025-11-11 12:51:43] [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/users/reset-password - application/json 54
+[2025-11-11 12:51:43] [DBG] 1 candidate(s) found for the request path '/api/users/reset-password'
+[2025-11-11 12:51:43] [DBG] Endpoint 'Demo_Backend.Controllers.UsersController.ResetPassword (Demo-Backend)' with route pattern 'api/Users/reset-password' is valid for the request path '/api/users/reset-password'
+[2025-11-11 12:51:43] [DBG] Request matched endpoint 'Demo_Backend.Controllers.UsersController.ResetPassword (Demo-Backend)'
+[2025-11-11 12:51:43] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:43] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:43] [INF] CORS policy execution successful.
+[2025-11-11 12:51:43] [DBG] AuthenticationScheme: Bearer was not authenticated.
+[2025-11-11 12:51:43] [INF] Executing endpoint 'Demo_Backend.Controllers.UsersController.ResetPassword (Demo-Backend)'
+[2025-11-11 12:51:43] [INF] Route matched with {action = "ResetPassword", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPassword(Demo_Backend.DTO.ResetPasswordDto) on controller Demo_Backend.Controllers.UsersController (Demo-Backend).
+[2025-11-11 12:51:43] [DBG] Execution plan of authorization filters (in the following order): ["None"]
+[2025-11-11 12:51:43] [DBG] Execution plan of resource filters (in the following order): ["None"]
+[2025-11-11 12:51:43] [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2025-11-11 12:51:43] [DBG] Execution plan of exception filters (in the following order): ["None"]
+[2025-11-11 12:51:43] [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2025-11-11 12:51:43] [DBG] Executing controller factory for controller Demo_Backend.Controllers.UsersController (Demo-Backend)
+[2025-11-11 12:51:43] [DBG] Executed controller factory for controller Demo_Backend.Controllers.UsersController (Demo-Backend)
+[2025-11-11 12:51:43] [DBG] Attempting to bind parameter 'dto' of type 'Demo_Backend.DTO.ResetPasswordDto' ...
+[2025-11-11 12:51:43] [DBG] Attempting to bind parameter 'dto' of type 'Demo_Backend.DTO.ResetPasswordDto' using the name '' in request data ...
+[2025-11-11 12:51:43] [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+[2025-11-11 12:51:43] [DBG] Connection id "0HNH0UBRHIO4D", Request id "0HNH0UBRHIO4D:00000002": started reading request body.
+[2025-11-11 12:51:43] [DBG] Connection id "0HNH0UBRHIO4D", Request id "0HNH0UBRHIO4D:00000002": done reading request body.
+[2025-11-11 12:51:43] [DBG] JSON input formatter succeeded, deserializing to type 'Demo_Backend.DTO.ResetPasswordDto'
+[2025-11-11 12:51:43] [DBG] Done attempting to bind parameter 'dto' of type 'Demo_Backend.DTO.ResetPasswordDto'.
+[2025-11-11 12:51:43] [DBG] Done attempting to bind parameter 'dto' of type 'Demo_Backend.DTO.ResetPasswordDto'.
+[2025-11-11 12:51:43] [DBG] Attempting to validate the bound parameter 'dto' of type 'Demo_Backend.DTO.ResetPasswordDto' ...
+[2025-11-11 12:51:43] [DBG] Done attempting to validate the bound parameter 'dto' of type 'Demo_Backend.DTO.ResetPasswordDto'.
+[2025-11-11 12:51:44] [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2025-11-11 12:51:44] [DBG] No information found on request to perform content negotiation.
+[2025-11-11 12:51:44] [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2025-11-11 12:51:44] [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+[2025-11-11 12:51:44] [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2025-11-11 12:51:44] [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-11-11 12:51:44] [INF] Executed action Demo_Backend.Controllers.UsersController.ResetPassword (Demo-Backend) in 960.9876ms
+[2025-11-11 12:51:44] [INF] Executed endpoint 'Demo_Backend.Controllers.UsersController.ResetPassword (Demo-Backend)'
+[2025-11-11 12:51:44] [INF] HTTP POST /api/users/reset-password responded 200 in 998.5803 ms
+[2025-11-11 12:51:44] [DBG] Connection id "0HNH0UBRHIO4D" completed keep alive response.
+[2025-11-11 12:51:44] [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/users/reset-password - 200 null application/json; charset=utf-8 1038.071ms
+[2025-11-11 12:51:54] [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/auth/login - null null
+[2025-11-11 12:51:54] [DBG] 1 candidate(s) found for the request path '/api/auth/login'
+[2025-11-11 12:51:54] [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+[2025-11-11 12:51:54] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:54] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:54] [INF] CORS policy execution successful.
+[2025-11-11 12:51:54] [DBG] The request is a preflight request.
+[2025-11-11 12:51:54] [DBG] Connection id "0HNH0UBRHIO4D" completed keep alive response.
+[2025-11-11 12:51:54] [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/auth/login - 204 null null 57.6177ms
+[2025-11-11 12:51:55] [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 51
+[2025-11-11 12:51:55] [DBG] 1 candidate(s) found for the request path '/api/auth/login'
+[2025-11-11 12:51:55] [DBG] Endpoint 'Demo_Backend.Controllers.AuthController.Login (Demo-Backend)' with route pattern 'api/Auth/login' is valid for the request path '/api/auth/login'
+[2025-11-11 12:51:55] [DBG] Request matched endpoint 'Demo_Backend.Controllers.AuthController.Login (Demo-Backend)'
+[2025-11-11 12:51:55] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:55] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:55] [INF] CORS policy execution successful.
+[2025-11-11 12:51:55] [DBG] AuthenticationScheme: Bearer was not authenticated.
+[2025-11-11 12:51:55] [INF] Executing endpoint 'Demo_Backend.Controllers.AuthController.Login (Demo-Backend)'
+[2025-11-11 12:51:55] [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Demo_Backend.DTO.LoginRequesDto) on controller Demo_Backend.Controllers.AuthController (Demo-Backend).
+[2025-11-11 12:51:55] [DBG] Execution plan of authorization filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of resource filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2025-11-11 12:51:55] [DBG] Execution plan of exception filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2025-11-11 12:51:55] [DBG] Executing controller factory for controller Demo_Backend.Controllers.AuthController (Demo-Backend)
+[2025-11-11 12:51:55] [DBG] Executed controller factory for controller Demo_Backend.Controllers.AuthController (Demo-Backend)
+[2025-11-11 12:51:55] [DBG] Attempting to bind parameter 'loginRequest' of type 'Demo_Backend.DTO.LoginRequesDto' ...
+[2025-11-11 12:51:55] [DBG] Attempting to bind parameter 'loginRequest' of type 'Demo_Backend.DTO.LoginRequesDto' using the name '' in request data ...
+[2025-11-11 12:51:55] [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4D", Request id "0HNH0UBRHIO4D:00000004": started reading request body.
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4D", Request id "0HNH0UBRHIO4D:00000004": done reading request body.
+[2025-11-11 12:51:55] [DBG] JSON input formatter succeeded, deserializing to type 'Demo_Backend.DTO.LoginRequesDto'
+[2025-11-11 12:51:55] [DBG] Done attempting to bind parameter 'loginRequest' of type 'Demo_Backend.DTO.LoginRequesDto'.
+[2025-11-11 12:51:55] [DBG] Done attempting to bind parameter 'loginRequest' of type 'Demo_Backend.DTO.LoginRequesDto'.
+[2025-11-11 12:51:55] [DBG] Attempting to validate the bound parameter 'loginRequest' of type 'Demo_Backend.DTO.LoginRequesDto' ...
+[2025-11-11 12:51:55] [DBG] Done attempting to validate the bound parameter 'loginRequest' of type 'Demo_Backend.DTO.LoginRequesDto'.
+[2025-11-11 12:51:55] [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2025-11-11 12:51:55] [DBG] No information found on request to perform content negotiation.
+[2025-11-11 12:51:55] [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2025-11-11 12:51:55] [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+[2025-11-11 12:51:55] [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2025-11-11 12:51:55] [INF] Executing OkObjectResult, writing value of type 'Demo_Backend.DTO.LoginResponseDto'.
+[2025-11-11 12:51:55] [INF] Executed action Demo_Backend.Controllers.AuthController.Login (Demo-Backend) in 483.2146ms
+[2025-11-11 12:51:55] [INF] Executed endpoint 'Demo_Backend.Controllers.AuthController.Login (Demo-Backend)'
+[2025-11-11 12:51:55] [INF] HTTP POST /api/auth/login responded 200 in 566.7827 ms
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4D" completed keep alive response.
+[2025-11-11 12:51:55] [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 635.349ms
+[2025-11-11 12:51:55] [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/products - null null
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4E" accepted.
+[2025-11-11 12:51:55] [DBG] 1 candidate(s) found for the request path '/api/products'
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4E" started.
+[2025-11-11 12:51:55] [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+[2025-11-11 12:51:55] [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/categories - null null
+[2025-11-11 12:51:55] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:55] [DBG] 1 candidate(s) found for the request path '/api/categories'
+[2025-11-11 12:51:55] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:55] [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+[2025-11-11 12:51:55] [INF] CORS policy execution successful.
+[2025-11-11 12:51:55] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:55] [DBG] The request is a preflight request.
+[2025-11-11 12:51:55] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4D" completed keep alive response.
+[2025-11-11 12:51:55] [INF] CORS policy execution successful.
+[2025-11-11 12:51:55] [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/products - 204 null null 24.0344ms
+[2025-11-11 12:51:55] [DBG] The request is a preflight request.
+[2025-11-11 12:51:55] [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/products - application/json null
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4E" completed keep alive response.
+[2025-11-11 12:51:55] [DBG] 1 candidate(s) found for the request path '/api/products'
+[2025-11-11 12:51:55] [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/categories - 204 null null 27.3111ms
+[2025-11-11 12:51:55] [DBG] Endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)' with route pattern 'api/Products' is valid for the request path '/api/products'
+[2025-11-11 12:51:55] [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/categories - application/json null
+[2025-11-11 12:51:55] [DBG] Request matched endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)'
+[2025-11-11 12:51:55] [DBG] 1 candidate(s) found for the request path '/api/categories'
+[2025-11-11 12:51:55] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:55] [DBG] Endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)' with route pattern 'api/Categories' is valid for the request path '/api/categories'
+[2025-11-11 12:51:55] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:55] [DBG] Request matched endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)'
+[2025-11-11 12:51:55] [INF] CORS policy execution successful.
+[2025-11-11 12:51:55] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:55] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:55] [INF] CORS policy execution successful.
+[2025-11-11 12:51:55] [DBG] Successfully validated the token.
+[2025-11-11 12:51:55] [DBG] Successfully validated the token.
+[2025-11-11 12:51:55] [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+[2025-11-11 12:51:55] [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+[2025-11-11 12:51:55] [DBG] Authorization was successful.
+[2025-11-11 12:51:55] [DBG] Authorization was successful.
+[2025-11-11 12:51:55] [INF] Executing endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)'
+[2025-11-11 12:51:55] [INF] Executing endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)'
+[2025-11-11 12:51:55] [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller Demo_Backend.Controllers.ProductsController (Demo-Backend).
+[2025-11-11 12:51:55] [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategories() on controller Demo_Backend.Controllers.CategoriesController (Demo-Backend).
+[2025-11-11 12:51:55] [DBG] Execution plan of authorization filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of authorization filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of resource filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of resource filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2025-11-11 12:51:55] [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2025-11-11 12:51:55] [DBG] Execution plan of exception filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of exception filters (in the following order): ["None"]
+[2025-11-11 12:51:55] [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2025-11-11 12:51:55] [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2025-11-11 12:51:55] [DBG] Executing controller factory for controller Demo_Backend.Controllers.ProductsController (Demo-Backend)
+[2025-11-11 12:51:55] [DBG] Executing controller factory for controller Demo_Backend.Controllers.CategoriesController (Demo-Backend)
+[2025-11-11 12:51:55] [DBG] Executed controller factory for controller Demo_Backend.Controllers.ProductsController (Demo-Backend)
+[2025-11-11 12:51:55] [DBG] Executed controller factory for controller Demo_Backend.Controllers.CategoriesController (Demo-Backend)
+[2025-11-11 12:51:55] [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2025-11-11 12:51:55] [DBG] No information found on request to perform content negotiation.
+[2025-11-11 12:51:55] [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2025-11-11 12:51:55] [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2025-11-11 12:51:55] [DBG] No information found on request to perform content negotiation.
+[2025-11-11 12:51:55] [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+[2025-11-11 12:51:55] [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2025-11-11 12:51:55] [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2025-11-11 12:51:55] [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+[2025-11-11 12:51:55] [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Demo_Backend.Models.Category, Demo-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-11-11 12:51:55] [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2025-11-11 12:51:55] [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Demo_Backend.Models.Product, Demo-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-11-11 12:51:55] [INF] Executed action Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend) in 45.3417ms
+[2025-11-11 12:51:55] [INF] Executed action Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend) in 48.6852ms
+[2025-11-11 12:51:55] [INF] Executed endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)'
+[2025-11-11 12:51:55] [INF] Executed endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)'
+[2025-11-11 12:51:55] [INF] HTTP GET /api/categories responded 200 in 76.7352 ms
+[2025-11-11 12:51:55] [INF] HTTP GET /api/products responded 200 in 79.3857 ms
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4E" completed keep alive response.
+[2025-11-11 12:51:55] [DBG] Connection id "0HNH0UBRHIO4D" completed keep alive response.
+[2025-11-11 12:51:55] [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/categories - 200 null application/json; charset=utf-8 135.0046ms
+[2025-11-11 12:51:55] [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/products - 200 null application/json; charset=utf-8 146.5243ms
+[2025-11-11 12:51:57] [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/products - application/json null
+[2025-11-11 12:51:57] [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/categories - application/json null
+[2025-11-11 12:51:57] [DBG] 1 candidate(s) found for the request path '/api/products'
+[2025-11-11 12:51:57] [DBG] 1 candidate(s) found for the request path '/api/categories'
+[2025-11-11 12:51:57] [DBG] Endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)' with route pattern 'api/Products' is valid for the request path '/api/products'
+[2025-11-11 12:51:57] [DBG] Endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)' with route pattern 'api/Categories' is valid for the request path '/api/categories'
+[2025-11-11 12:51:57] [DBG] Request matched endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)'
+[2025-11-11 12:51:57] [DBG] Request matched endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)'
+[2025-11-11 12:51:57] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:57] [DBG] Static files was skipped as the request already matched an endpoint.
+[2025-11-11 12:51:57] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:57] [DBG] The request has an origin header: 'http://localhost:4200'.
+[2025-11-11 12:51:57] [INF] CORS policy execution successful.
+[2025-11-11 12:51:57] [INF] CORS policy execution successful.
+[2025-11-11 12:51:57] [DBG] Successfully validated the token.
+[2025-11-11 12:51:57] [DBG] Successfully validated the token.
+[2025-11-11 12:51:57] [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+[2025-11-11 12:51:57] [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+[2025-11-11 12:51:57] [DBG] Authorization was successful.
+[2025-11-11 12:51:57] [DBG] Authorization was successful.
+[2025-11-11 12:51:57] [INF] Executing endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)'
+[2025-11-11 12:51:57] [INF] Executing endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)'
+[2025-11-11 12:51:57] [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller Demo_Backend.Controllers.ProductsController (Demo-Backend).
+[2025-11-11 12:51:57] [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategories() on controller Demo_Backend.Controllers.CategoriesController (Demo-Backend).
+[2025-11-11 12:51:57] [DBG] Execution plan of authorization filters (in the following order): ["None"]
+[2025-11-11 12:51:57] [DBG] Execution plan of authorization filters (in the following order): ["None"]
+[2025-11-11 12:51:57] [DBG] Execution plan of resource filters (in the following order): ["None"]
+[2025-11-11 12:51:57] [DBG] Execution plan of resource filters (in the following order): ["None"]
+[2025-11-11 12:51:57] [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2025-11-11 12:51:57] [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2025-11-11 12:51:57] [DBG] Execution plan of exception filters (in the following order): ["None"]
+[2025-11-11 12:51:57] [DBG] Execution plan of exception filters (in the following order): ["None"]
+[2025-11-11 12:51:57] [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2025-11-11 12:51:57] [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2025-11-11 12:51:57] [DBG] Executing controller factory for controller Demo_Backend.Controllers.ProductsController (Demo-Backend)
+[2025-11-11 12:51:57] [DBG] Executing controller factory for controller Demo_Backend.Controllers.CategoriesController (Demo-Backend)
+[2025-11-11 12:51:57] [DBG] Executed controller factory for controller Demo_Backend.Controllers.ProductsController (Demo-Backend)
+[2025-11-11 12:51:57] [DBG] Executed controller factory for controller Demo_Backend.Controllers.CategoriesController (Demo-Backend)
+[2025-11-11 12:51:57] [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2025-11-11 12:51:57] [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+[2025-11-11 12:51:57] [DBG] No information found on request to perform content negotiation.
+[2025-11-11 12:51:57] [DBG] No information found on request to perform content negotiation.
+[2025-11-11 12:51:57] [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2025-11-11 12:51:57] [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2025-11-11 12:51:57] [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+[2025-11-11 12:51:57] [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+[2025-11-11 12:51:57] [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2025-11-11 12:51:57] [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+[2025-11-11 12:51:57] [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Demo_Backend.Models.Product, Demo-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-11-11 12:51:57] [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Demo_Backend.Models.Category, Demo-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-11-11 12:51:57] [INF] Executed action Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend) in 120.8759ms
+[2025-11-11 12:51:57] [INF] Executed action Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend) in 118.815ms
+[2025-11-11 12:51:57] [INF] Executed endpoint 'Demo_Backend.Controllers.ProductsController.GetProducts (Demo-Backend)'
+[2025-11-11 12:51:57] [INF] Executed endpoint 'Demo_Backend.Controllers.CategoriesController.GetCategories (Demo-Backend)'
+[2025-11-11 12:51:57] [INF] HTTP GET /api/products responded 200 in 271.2427 ms
+[2025-11-11 12:51:57] [INF] HTTP GET /api/categories responded 200 in 272.4049 ms
+[2025-11-11 12:51:57] [DBG] Connection id "0HNH0UBRHIO4D" completed keep alive response.
+[2025-11-11 12:51:57] [DBG] Connection id "0HNH0UBRHIO4E" completed keep alive response.
+[2025-11-11 12:51:57] [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/products - 200 null application/json; charset=utf-8 430.3614ms
+[2025-11-11 12:51:57] [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/categories - 200 null application/json; charset=utf-8 434.7763ms
+[2025-11-11 12:54:08] [DBG] Connection id "0HNH0UBRHIO4E" disconnecting.
+[2025-11-11 12:54:08] [DBG] Connection id "0HNH0UBRHIO4D" disconnecting.
+[2025-11-11 12:54:08] [DBG] Connection id "0HNH0UBRHIO4E" stopped.
+[2025-11-11 12:54:08] [DBG] Connection id "0HNH0UBRHIO4D" stopped.
+[2025-11-11 12:54:08] [DBG] Connection id "0HNH0UBRHIO4E" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2025-11-11 12:54:08] [DBG] Connection id "0HNH0UBRHIO4D" sending FIN because: "The Socket transport's send loop completed gracefully."
