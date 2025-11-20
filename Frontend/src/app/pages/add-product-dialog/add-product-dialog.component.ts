@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   selector: 'app-add-product-dialog',
   standalone: false,
   templateUrl: './add-product-dialog.component.html',
-  styleUrl: './add-product-dialog.component.scss'
+  styleUrls: ['./add-product-dialog.component.scss']
 })
 export class AddProductDialogComponent implements OnChanges {
   @Output() closeForm = new EventEmitter<void>();

@@ -6,7 +6,7 @@ import { AuthService } from '../../services/auth.service'; // Import AuthService
   selector: 'app-productsview',
   standalone: false,
   templateUrl: './productsview.component.html',
-  styleUrl: './productsview.component.scss'
+  styleUrls: ['./productsview.component.scss']
 })
 export class ProductsviewComponent {
   products: any[] = [];

@@ -5,7 +5,7 @@ import { SidebarService } from '../sidebar/sidebar.service';
   selector: 'app-main-content',
   standalone: false,
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  styleUrls: ['./main-content.component.scss']
 })
 export class MainContentComponent {
   constructor(private sidebarService:SidebarService){}

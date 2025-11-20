@@ -6,7 +6,7 @@ import { CategoriesService } from '../categoriesview/categories.service';
   selector: 'app-add-category',
   standalone: false,
   templateUrl: './add-category.component.html',
-  styleUrl: './add-category.component.scss'
+  styleUrls: ['./add-category.component.scss']
 })
 export class AddCategoryComponent implements OnChanges {
   @Output() formSubmit = new EventEmitter<any>();

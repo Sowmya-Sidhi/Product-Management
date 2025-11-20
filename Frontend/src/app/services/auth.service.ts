@@ -34,7 +34,8 @@ export class AuthService {
     }
   }
   resetPassword(email: string, newPassword: string) {
-  return this.http.post(`${this.baseUrl}/reset-password`, { email, newPassword });
+  // Backend reset endpoint lives under /api/users/reset-password
+  return this.http.post(`http://localhost:5000/api/users/reset-password`, { email, newPassword });
 }
 
 

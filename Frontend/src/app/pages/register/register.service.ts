@@ -18,14 +18,15 @@ export class RegisterService {
   }
 
   getToken(): string | null {
-    return localStorage.getItem('token');
+    // Use sessionStorage to match `AuthService` behavior
+    return sessionStorage.getItem('token');
   }
 
   saveToken(token: string) {
-    localStorage.setItem('token', token);
+    sessionStorage.setItem('token', token);
   }
 
   logout() {
-    localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
   }
 }

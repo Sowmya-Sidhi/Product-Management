@@ -6,7 +6,7 @@ import { CategoriesService } from '../categoriesview/categories.service';
   selector: 'app-reportsview',
   standalone: false,
   templateUrl: './reportsview.component.html',
-  styleUrl: './reportsview.component.scss'
+  styleUrls: ['./reportsview.component.scss']
 })
 export class ReportsviewComponent {
 totalproducts=0;

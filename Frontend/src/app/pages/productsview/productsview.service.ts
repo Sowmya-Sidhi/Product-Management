@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,49 +11,30 @@ export class ProductsviewService {
 
   constructor(private http: HttpClient) {}
 
-  // Helper function to attach JWT token
-  private getAuthHeaders(): HttpHeaders {
-    const token = sessionStorage.getItem('token'); // token saved during login
-    return new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`
-    });
-  }
+  // Authorization header is added by `authInterceptor` globally.
 
   // GET all products
   getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl, {
-      headers: this.getAuthHeaders()
-    });
+    return this.http.get<any[]>(this.apiUrl);
   }
 
   getCategories(): Observable<any[]> {
-  return this.http.get<any[]>(this.apiUrl1,{
-    headers:this.getAuthHeaders()
-  
-  });
+  return this.http.get<any[]>(this.apiUrl1);
 }
 
 
   // POST add product
   addProduct(product: any): Observable<any> {
-    return this.http.post(this.apiUrl, product, {
-      headers: this.getAuthHeaders()
-    });
+    return this.http.post(this.apiUrl, product);
   }
 
   // PUT update product
   updateProduct(code: string, product: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${code}`, product, {
-      headers: this.getAuthHeaders()
-    });
+    return this.http.put(`${this.apiUrl}/${code}`, product);
   }
   
   //  DELETE product
   deleteProduct(code: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${code}`, {
-      headers: this.getAuthHeaders(),
-      responseType: 'text' as 'json' // fix JSON parse issue
-    });
+    return this.http.delete(`${this.apiUrl}/${code}`, { responseType: 'text' as 'json' });
   }
 }

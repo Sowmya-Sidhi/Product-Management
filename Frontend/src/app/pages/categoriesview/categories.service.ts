@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,34 +10,23 @@ export class CategoriesService {
 
   constructor(private http: HttpClient) {}
 
-  private getAuthHeaders(): HttpHeaders {
-    const token = sessionStorage.getItem('token');
-    return new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`
-    });
-  }
-
   // ✅ GET all categories
   getCategories(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl, { headers: this.getAuthHeaders() });
+    return this.http.get<any[]>(this.apiUrl);
   }
 
   // ✅ POST add category
   addCategory(category: any): Observable<any> {
-    return this.http.post(this.apiUrl, category, { headers: this.getAuthHeaders() });
+    return this.http.post(this.apiUrl, category);
   }
 
   // ✅ PUT update category
   updateCategory(id: string, category: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, category, { headers: this.getAuthHeaders() });
+    return this.http.put(`${this.apiUrl}/${id}`, category);
   }
 
   // ✅ DELETE category
   deleteCategory(id: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`, {
-      headers: this.getAuthHeaders(),
-      responseType: 'text' as 'json'
-    });
+    return this.http.delete(`${this.apiUrl}/${id}`, { responseType: 'text' as 'json' });
   }
 }

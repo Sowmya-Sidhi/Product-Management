@@ -6,7 +6,7 @@ import { AuthService } from '../../services/auth.service';
   selector: 'app-categoriesview',
   standalone: false,
   templateUrl: './categoriesview.component.html',
-  styleUrl: './categoriesview.component.scss'
+  styleUrls: ['./categoriesview.component.scss']
 })
 export class CategoriesviewComponent {
   categories: any[] = [];
