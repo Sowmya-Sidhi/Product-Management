@@ -36,10 +36,8 @@ currentPage='';
   }
   onExit(){
     this.router.navigate(['/login']);
-
-    
-
   }
+  
     updatePageTitle(url: string) {
     if (url.includes('dashboard')) this.currentPage = 'Dashboard';
     else if (url.includes('products')) this.currentPage = 'Products';

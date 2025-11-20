@@ -271,19 +271,17 @@ tr:hover {
 }
 
 .add-category-container button {
-  background: #2563eb;
-  color: #ffffff;
+  
+  color: black;
   border: none;
   border-radius: 8px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.add-category-container button:hover:not(:disabled) {
-  background: #1e40af;
-}
+
 
 .add-category-container button:disabled {
   background: #9ca3af;

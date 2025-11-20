@@ -1,4 +1,9 @@
-﻿using BCrypt.Net;
+﻿/*
+  UsersController.cs
+  - User-related API endpoints (example: password reset).
+  - Uses `IMongoDbService` to locate and update user records.
+  - Password hashing and verification are delegated to `IAuthService`.
+*/
 using Demo_Backend.DTO;
 using Demo_Backend.Models;
 using Demo_Backend.Services;
@@ -11,11 +16,13 @@ namespace Demo_Backend.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly MongoDbService _mongoService;
+        private readonly IMongoDbService _mongoService;
+        private readonly IAuthService _authService;
 
-        public UsersController(MongoDbService mongoService)
+        public UsersController(IMongoDbService mongoService, IAuthService authService)
         {
             _mongoService = mongoService;
+            _authService = authService;
         }
 
         // POST: api/users/reset-password
@@ -29,11 +36,11 @@ namespace Demo_Backend.Controllers
             if (user == null)
                 return NotFound("User not found.");
 
-            // Hash the new password
-            user.Password = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
+            // Hash the new password via AuthService
+            user.Password = await _authService.HashPasswordAsync(dto.NewPassword);
             await _mongoService.UpdateUserAsync(user);
 
-            return Ok(new {message="Password reset successfully." });
+            return Ok(new { message = "Password reset successfully." });
         }
     }
 }

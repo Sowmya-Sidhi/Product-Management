@@ -1,9 +1,11 @@
-<div class="sidebar">
-    <ul>
-        <li *ngFor="let view of views">
-            <a [routerLink]="view.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-                {{ view.name }}
-            </a>
-        </li>
-    </ul>
-</div>
+<mat-drawer #drawer mode="side" opened class="sidebar">
+<ul>
+  <li *ngFor="let view of views">
+    <a [routerLink]="view.route"
+       routerLinkActive="active"
+       (click)="closeSidebar()">
+      {{ view.name }}
+    </a>
+  </li>
+</ul>
+</mat-drawer>

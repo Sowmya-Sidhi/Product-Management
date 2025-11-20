@@ -1,4 +1,9 @@
-﻿namespace Demo_Backend.DTO
+﻿/*
+    ProductDto.cs
+    - DTO representing the fields that the frontend typically needs for product views.
+    - Used to decouple domain model from serialized API responses when needed.
+*/
+namespace Demo_Backend.DTO
 {
     public class ProductDto 
     {

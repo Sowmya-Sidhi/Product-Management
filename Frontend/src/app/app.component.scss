@@ -1,52 +1,86 @@
-//Whole page
+/* -------- ENTIRE PAGE LAYOUT -------- */
 .layout {
   display: flex;
   flex-direction: column;
-  height: 98vh; // full page height
-  background-color: #f9f9f9;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f9fafb;
 }
-//heading
+
+
+/* -------- NAVBAR -------- */
 app-navbar {
-  height: 80px;
-  background-color: #F8FAFC;
-  color: #fff;
+  height: 60px;
+  display: block;
   flex-shrink: 0;
+  background-color: #F8FAFC;
 }
 
 
-
+/* -------- MAIN CONTENT AREA -------- */
 .main-container {
-  display: flex;
   flex: 1;
-  overflow: hidden; 
+  display: flex;
+  overflow: hidden;
+  // height: calc(100vh - 120px); /* navbar + footer */
 }
 
-//sidebar
-app-sidebar {
-  width: 240px;
+
+/* -------- SIDEBAR / MAT-DRAWER -------- */
+app-sidebar,
+.sidebar {
+  width: 260px; /* drawer width */
   background-color: #F8FAFC;
-  color: #fff;
-  flex-shrink: 0;
-  border-radius: 20px;
+  padding: 20px 10px;
+  overflow-y: auto;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #1f2937;
+  // border-radius: 8px;
+  transition: 0.2s;
+}
+
+.sidebar li a:hover {
+  background-color: rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+
+.sidebar li a.active {
+  border-left: 4px solid #6b7280;
+  background-color: rgba(0,0,0,0.08);
+}
+
+
+/* -------- MAIN CONTENT INSIDE <mat-drawer-content> -------- */
+.content-area {
+  flex: 1;
   padding: 20px;
   overflow-y: auto;
-}
-
-//maincontentarea
-.content {
-  flex: 1;
   background-color: #fff;
-  padding: 20px;
-  overflow-y: auto;
 }
 
-//footer
+
+/* -------- FOOTER -------- */
 app-footer {
-  height: 40px;
-  background-color: #F8FAFC;
-  color: #111827;
+  height: 60px;
   display: flex;
-  justify-content: left;
   align-items: center;
+  padding-left: 20px;
+  background: #f3f4f6;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
   flex-shrink: 0;
 }

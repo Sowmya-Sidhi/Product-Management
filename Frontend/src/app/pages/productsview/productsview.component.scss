@@ -5,7 +5,7 @@
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1f2937;
-  background: #f9fafb;
+  // background: #f9fafb;
 }
 
 /* ===== Header Bar ===== */
@@ -23,59 +23,146 @@
 .header-bar .title-section h1 {
   margin: 0;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
+// /* Container alignment (optional) */
+// .search-wrapper {
+//   display: flex;
+//   justify-content: flex-end;
+//   margin-bottom: 20px;
+// }
 
-/* ===== Search Section ===== */
-.header-bar .search-section {
-  display: flex;
-  align-items: center;
-}
+// /* CUSTOM SEARCH FIELD */
+// .custom-search {
+//   width: 320px;        /* change width */
+//   height: 60px;        /* change height */
+// }
+
+// /* Make the outline rounded */
+// .custom-search .mat-form-field-outline {
+//   border-radius: 60px;
+// }
+
+// /* Adjust height of input */
+// .custom-search .mat-input-element {
+//   padding: 5px ;
+//   font-size: 10px;
+// }
+
+// /* Icon styling */
+// .custom-search mat-icon {
+//   font-size: 22px;
+//   margin-right: 5px;
+//   color: #6b7280; /* gray tone */
+// }
+
+// /* Border color when inactive */
+// .custom-search.mat-form-field-appearance-outline .mat-form-field-outline {
+//   color: #d1d5db; /* light gray */
+// }
+
+
 
 .search-wrapper {
-  position: relative;
-  width: 250px; /* Adjust width if needed */
-}
-
-.search-wrapper input {
-  width: 78%;
-  padding: 8px 40px 8px 12px; /* extra right padding for the icon */
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.2s;
-  font-size: 14px;
-  background-color: #fff;
-}
-
-.search-wrapper input:focus {
-  border-color: #111827;
-}
-
-/* Button inside input */
-.search-wrapper button {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
- 
-  width: 28px;
-  height: 28px;
+  width: 300px;               /* adjust */
+  height: 40px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, color 0.2s;
+  align-items: center;        /* vertical alignment */
+  gap: 10px;                  /* spacing between input and icon */
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
-.search-wrapper button:hover {
-  background: #d1d5db;
-  color: #111827;
+.custom-search {
+  flex: 1;                     /* fills available space */
+  height: 50px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  border-radius: 40px;
+  background: transparent;
 }
+
+.search-icon {
+  font-size: 18px;
+  color: #475569;
+}
+
+
+// .search-wrapper{
+
+//    height: 40px;
+// //   width: 150%;
+//  }
+// .custom-search{
+//   width: 90%;
+//   height: 60px;
+//   line-height: 40px;       /* removes full border */
+//   outline: none;  
+//   border-bottom: none;
+// }
+/* Border color on hover */
+// .custom-search:hover .mat-form-field-outline-thick {
+//   color: #3f83f8; /* blue hover */
+// }
+
+/* Border color when focused */
+// .custom-search.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+//   color: #1d4ed8; /* primary blue */
+// }
+
+// /* ===== Search Section ===== */
+// .header-bar .search-section {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .search-wrapper {
+//   position: relative;
+//   width: 250px; /* Adjust width if needed */
+// }
+
+// .search-wrapper input {
+//   width: 78%;
+//   padding: 8px 40px 8px 12px; /* extra right padding for the icon */
+//   border: 1px solid #d1d5db;
+//   border-radius: 6px;
+//   outline: none;
+//   transition: border-color 0.2s;
+//   font-size: 14px;
+//   background-color: #fff;
+// }
+
+// .search-wrapper input:focus {
+//   border-color: #111827;
+// }
+
+// /* Button inside input */
+// .search-wrapper button {
+//   position: absolute;
+//   right: 8px;
+//   top: 50%;
+//   transform: translateY(-50%);
+  
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   font-size: 14px;
+ 
+//   width: 28px;
+//   height: 28px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   transition: background 0.2s, color 0.2s;
+// }
+
+// .search-wrapper button:hover {
+//   background: #d1d5db;
+//   color: #111827;
+// }
 
 /* ===== Add Button ===== */
 .header-bar > button {

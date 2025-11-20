@@ -1,4 +1,10 @@
-﻿using Demo_Backend.DTO;
+﻿/*
+  DashboardController.cs
+  - Provides lightweight dashboard endpoints (summary statistics) by aggregating product/category counts.
+  - Uses `MongoDbService` to retrieve lists and computes simple counts returned in `DashboardSummaryDto`.
+  - Keep this controller small — expensive aggregations should be moved to database-side queries/indexes if needed.
+*/
+using Demo_Backend.DTO;
 using Demo_Backend.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -10,9 +16,9 @@ namespace Demo_Backend.Controllers
     [ApiController]
     public class DashboardController : ControllerBase
     {
-        private readonly MongoDbService _mongoService;
+        private readonly IMongoDbService _mongoService;
 
-        public DashboardController(MongoDbService mongoService)
+        public DashboardController(IMongoDbService mongoService)
         {
             _mongoService = mongoService;
         }

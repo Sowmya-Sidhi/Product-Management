@@ -1,4 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿/*
+  JwtService.cs
+  - Responsible for creating JWTs used across the app.
+  - Reads signing key, issuer/audience and expiration from configuration via `IConfiguration`.
+  - Generates tokens that include standard claims (sub, unique_name, role) consumed by controllers.
+*/
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
@@ -18,7 +24,8 @@ namespace Demo_Backend.Services
 
         public string GenerateToken(string userId, string username, string role)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var keyString = _config["Jwt:Key"] ?? throw new InvalidOperationException("Missing JWT configuration: Jwt:Key");
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
@@ -33,7 +40,7 @@ namespace Demo_Backend.Services
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(Convert.ToDouble(_config["Jwt:ExpireMinutes"])),
+                expires: DateTime.Now.AddMinutes(Convert.ToDouble(_config["Jwt:ExpireMinutes"] ?? "60")),
                 signingCredentials: creds
             );
 

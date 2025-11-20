@@ -1,4 +1,9 @@
-﻿namespace Demo_Backend.DTO
+﻿/*
+  DashboardSummaryDto.cs
+  - Simple DTO returned by `DashboardController.GetDashboardSummary`.
+  - Contains aggregated counts for products and categories used in the UI dashboard.
+*/
+namespace Demo_Backend.DTO
 {
     public class DashboardSummaryDto
     {

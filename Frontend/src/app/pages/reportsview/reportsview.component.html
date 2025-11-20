@@ -1,20 +1,46 @@
-<div class="header-bar">
+    <div class="header-bar">
     <h1>Dashboard</h1>
     </div>
-    <div class="cards">
-    <div class="data">
+    <div class="cards-container">
+
+    <mat-card appearance="outlined" class="stat-card">
+     <mat-card-header>
+        <mat-card-title>Total Products</mat-card-title>
+        </mat-card-header>
+         <div class="stat-value">{{ totalproducts }}</div>
+    
+ </mat-card>
+
+<mat-card appearance="outlined" class="stat-card">
+    <mat-card-header>
+        <mat-card-title>Active Products</mat-card-title>
+        </mat-card-header>
+        <div class="stat-value">{{activeproducts}}</div>
+    
+</mat-card>
+
+    <mat-card appearance="outlined" class="stat-card">
+    <mat-card-header>
+        <mat-card-title>Total Categories</mat-card-title>
+         </mat-card-header>
+        <div class="stat-value">{{totalcategories}}</div>
+   
+</mat-card>
+</div>
+
+
+<!-- <div class="active-products">
+        <h2>Active Products</h2>
+        <p>{{activeproducts}}</p>
+    </div> -->
+ <!-- <div class="data">
         <div class="total-products">
         <h2>Total Products</h2>
         <p>{{totalproducts}}</p>
-    </div>
-    <div class="active-products">
-        <h2>Active Products</h2>
-        <p>{{activeproducts}}</p>
-    </div>
-    <div class="totalcategories">
+    </div> -->
+    <!-- <div class="totalcategories">
         <h2>Total Categories</h2>
         <p>{{totalcategories}}</p>
-    </div>
-
-    </div>
-</div>
+    </div> -->
+   
+<!-- </div> -->

@@ -1,1 +1,4 @@
 [2025-11-12 11:26:30] [INF] User 68eca691e742a08862aadfc9 performed Created Category. Details: Category Name: kjhg at "2025-11-12T11:26:30.0923702+05:30"
+[2025-11-12 12:57:44] [INF] User 68eca691e742a08862aadfc9 performed Deleted Category. Details: Category Name: Sample456 at "2025-11-12T12:57:44.3716761+05:30"
+[2025-11-12 17:09:39] [INF] User Unknown performed Updated Product. Details: Product Name: Sowmya at "2025-11-12T17:09:39.2027166+05:30"
+[2025-11-12 17:09:42] [INF] User Unknown performed Updated Product. Details: Product Name: Sowmya at "2025-11-12T17:09:42.6208617+05:30"

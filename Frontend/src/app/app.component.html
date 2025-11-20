@@ -1,20 +1,31 @@
 <div *ngIf="!isAuthPage()">
- <div class="layout">
-<app-navbar></app-navbar>
+  <div class="layout">
 
-<div class="main-container">
-  <app-sidebar></app-sidebar>
-  <main class="content">
-    <router-outlet></router-outlet>
-    <app-main-content></app-main-content>
-  </main>
-</div>
+    <app-navbar></app-navbar>
 
-<app-footer></app-footer>
-</div>
+    <mat-drawer-container class="main-container">
+
+      <!-- SIDEBAR -->
+      <mat-drawer #drawer mode="side" opened class="sidebar">
+        <app-sidebar></app-sidebar>
+      </mat-drawer>
+
+      <!-- MAIN CONTENT -->
+      <mat-drawer-content class="content-area">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+
+    </mat-drawer-container>
+
+    <app-footer></app-footer>
+
+  </div>
 </div>
 
 <div *ngIf="isAuthPage()">
   <router-outlet></router-outlet>
 </div>
-

@@ -1,4 +1,38 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+
+@use '@angular/material' as mat;
+
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: mat.$cyan-palette,
+    typography: Roboto,
+    density: 0
+  ));
+}
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* styles.scss or component's SCSS */
+
+/* Remove hover background and underline color */
+.mat-mdc-form-field:hover .mdc-notched-outline__leading,
+.mat-mdc-form-field:hover .mdc-notched-outline__trailing,
+.mat-mdc-form-field:hover .mdc-notched-outline__notch {
+  border-color: transparent !important;
+}
+
+/* Remove focus outline color */
+.mat-mdc-form-field.mat-focused .mdc-notched-outline__leading,
+.mat-mdc-form-field.mat-focused .mdc-notched-outline__trailing,
+.mat-mdc-form-field.mat-focused .mdc-notched-outline__notch {
+  border-color: transparent !important;
+}
+
+/* Optional: remove background highlight on hover */
+.mat-mdc-form-field:hover {
+  background-color: transparent !important;
+}

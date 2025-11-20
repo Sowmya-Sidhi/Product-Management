@@ -1,4 +1,9 @@
-﻿namespace Demo_Backend.DTO
+﻿/*
+  LoginRequesDto.cs
+  - DTO for login requests received from frontend (email + password).
+  - Used by `AuthController.Login` to bind incoming JSON.
+*/
+namespace Demo_Backend.DTO
 {
     public class LoginRequesDto
     {

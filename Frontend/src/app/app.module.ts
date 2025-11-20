@@ -21,6 +21,13 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './auth.interceptor';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
 import { ResetpasswordComponent } from './pages/resetpassword/resetpassword.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+import { MatFormField, MatPrefix, MatSuffix } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -46,9 +53,17 @@ import { ResetpasswordComponent } from './pages/resetpassword/resetpassword.comp
     MatDialogModule,
     MatButtonModule,
     AppRoutingModule,
-    ReactiveFormsModule
-    
-  ],
+    ReactiveFormsModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatFormField,
+    MatPrefix,
+    MatSuffix,MatIcon,
+    MatInputModule,
+    MatCardModule
+],
   providers: [
   provideClientHydration(withEventReplay()),
   provideHttpClient(withInterceptors([authInterceptor]))

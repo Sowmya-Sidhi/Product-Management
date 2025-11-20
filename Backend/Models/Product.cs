@@ -1,4 +1,11 @@
-﻿using MongoDB.Bson;
+﻿/*
+  Product.cs
+  - Domain model for products persisted in the `Products` collection in MongoDB.
+  - Contains audit fields (`CreatedAt/UpdatedAt/CreatedBy/UpdatedBy`) which controllers set.
+  - Note: `CategoryName` currently stores a category identifier or name depending on usage;
+    confirm model semantics before changing delete/update logic.
+*/
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 

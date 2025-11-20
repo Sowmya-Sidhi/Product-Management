@@ -6,6 +6,12 @@ using Demo_Backend.DTO;
 
 namespace Demo_Backend.Controllers
 {
+    /*
+      SettingsController.cs
+      - Manages application-level settings exposed through the API.
+      - Uses `MongoDbService` to read/update settings persisted in the database.
+      - Protected by `[Authorize]` so only authenticated users can access settings endpoints.
+    */
     [Route("api/[controller]")]
     [ApiController]
     public class SettingsController : ControllerBase

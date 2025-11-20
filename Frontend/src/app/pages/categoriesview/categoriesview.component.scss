@@ -5,7 +5,7 @@
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1f2937;
-  background: #f9fafb;
+  // background: #f9fafb;
 }
 
 /* ===== Header ===== */
@@ -15,7 +15,6 @@
   align-items: center;
   margin-bottom: 20px;
   padding: 15px 20px;
-  // background: #ffffff;
   border-radius: 8px;
   // box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
@@ -59,7 +58,7 @@
 .tb {
   flex: 1 1 auto;
   overflow-y: auto;
-  max-height: 642px;
+  max-height: 650px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);

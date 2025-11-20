@@ -1,4 +1,9 @@
-﻿namespace Demo_Backend.DTO
+﻿/*
+  LoginResponseDto.cs
+  - DTO returned by `AuthController.Login` on successful authentication.
+  - Contains minimal user info and the JWT `Token` for client storage.
+*/
+namespace Demo_Backend.DTO
 {
     public class LoginResponseDto
     {
